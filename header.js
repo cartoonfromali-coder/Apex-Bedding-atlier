@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <a href="mattresses.html">Mattresses</a>
           <a href="kids-beds.html">Kids Beds</a>
           <a href="bed-accessories.html">Accessories</a>
-          <a href="custom-bed-builder.html" class="highlight-btn">Build Custom Bed</a>
+          <a href="#custom-bed-builder.html" class="highlight-btn">Build Custom Bed</a>
         </nav>
         <button class="mobile-menu-btn" type="button" aria-label="Open navigation" aria-expanded="false">
           <span></span><span></span><span></span>
