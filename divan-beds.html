@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Divan Beds | Base Apex Bedding Atelier</title>
+  <meta
+    name="description"
+    content="Explore practical divan bed guides covering sizes, drawer storage and divan versus ottoman bed options."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --bg: #090a0f;
+      --surface: #0f1118;
+      --surface-hover: #131722;
+      --text: #ffffff;
+      --muted: #9ca3af;
+      --accent: #f59e0b;
+      --secondary: #0ea5e9;
+      --border: rgba(14, 165, 233, 0.3);
+      --soft-border: rgba(255, 255, 255, 0.08);
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .divan-page {
+      min-height: 100vh;
+      background:
+        radial-gradient(
+          circle at 15% 10%,
+          rgba(14, 165, 233, 0.08),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(245, 158, 11, 0.06),
+          transparent 25%
+        ),
+        var(--bg);
+    }
+
+    .divan-container {
+      width: min(100% - 40px, var(--max-width));
+      margin: 0 auto;
+    }
+
+    /* Hero */
+
+    .divan-hero {
+      padding: 110px 0 85px;
+      border-bottom: 1px solid var(--soft-border);
+    }
+
+    .divan-hero-inner {
+      max-width: 850px;
+    }
+
+    .divan-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .divan-eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .divan-hero h1 {
+      max-width: 800px;
+      margin-bottom: 24px;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+      font-weight: 700;
+    }
+
+    .divan-hero h1 span {
+      color: var(--secondary);
+    }
+
+    .divan-hero-description {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    /* Articles */
+
+    .divan-articles-section {
+      padding: 85px 0 100px;
+    }
+
+    .divan-section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
+      margin-bottom: 42px;
+    }
+
+    .divan-section-heading h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+    }
+
+    .divan-section-heading p {
+      max-width: 430px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .divan-article-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .divan-article-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 390px;
+      padding: 30px;
+      background: var(--surface);
+      border: 1px solid var(--soft-border);
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .divan-article-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--border);
+      background: var(--surface-hover);
+    }
+
+    .divan-card-number {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 55px;
+    }
+
+    .divan-card-number span:first-child {
+      color: var(--secondary);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+    }
+
+    .divan-card-number span:last-child {
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--soft-border);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .divan-card-tag {
+      margin-bottom: 14px;
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .divan-article-card h3 {
+      margin-bottom: 17px;
+      font-size: 23px;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    .divan-article-card p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .divan-read-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: auto;
+      padding-top: 30px;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 600;
+      transition:
+        color 0.2s ease,
+        gap 0.2s ease;
+    }
+
+    .divan-read-link:hover {
+      color: var(--accent);
+      gap: 13px;
+    }
+
+    .divan-read-link span {
+      color: var(--secondary);
+      font-size: 17px;
+    }
+
+    /* Category Navigation */
+
+    .divan-next-section {
+      padding: 0 0 100px;
+    }
+
+    .divan-next-box {
+      padding: 42px;
+      border: 1px solid var(--soft-border);
+      background: rgba(15, 17, 24, 0.75);
+    }
+
+    .divan-next-box-label {
+      margin-bottom: 22px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .divan-category-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .divan-category-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 11px 16px;
+      border: 1px solid var(--soft-border);
+      color: #d1d5db;
+      font-size: 13px;
+      transition:
+        border-color 0.2s ease,
+        color 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .divan-category-link:hover {
+      border-color: var(--secondary);
+      color: var(--text);
+      background: rgba(14, 165, 233, 0.06);
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .divan-article-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .divan-article-card {
+        min-height: auto;
+      }
+
+      .divan-card-number {
+        margin-bottom: 40px;
+      }
+
+      .divan-section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .divan-container {
+        width: min(100% - 28px, var(--max-width));
+      }
+
+      .divan-hero {
+        padding: 75px 0 60px;
+      }
+
+      .divan-hero-description {
+        font-size: 15px;
+      }
+
+      .divan-articles-section {
+        padding: 60px 0 70px;
+      }
+
+      .divan-article-card {
+        padding: 24px;
+      }
+
+      .divan-next-box {
+        padding: 28px 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="divan-page">
+
+    <header id="hhzwje">
+      <script src="header.js" defer></script>
+    </header>
+
+    <main>
+
+      <!-- Hero -->
+      <section class="divan-hero">
+        <div class="divan-container">
+          <div class="divan-hero-inner">
+
+            <div class="divan-eyebrow">
+              Divan Bed Guides
+            </div>
+
+            <h1>
+              Understand the <span>Divan Bed</span> before you choose.
+            </h1>
+
+            <p class="divan-hero-description">
+              Practical guides covering divan bed sizing, storage
+              configurations and how divan beds compare with other
+              storage-focused bed types. Start with the topic that matches
+              what you are trying to decide.
+            </p>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Article Hub -->
+      <section class="divan-articles-section">
+        <div class="divan-container">
+
+          <div class="divan-section-heading">
+
+            <h2>
+              Choose a guide to read
+            </h2>
+
+            <p>
+              Each guide focuses on one specific buying decision, so you can
+              compare your options without working through unrelated
+              information.
+            </p>
+
+          </div>
+
+          <div class="divan-article-grid">
+
+            <!-- Article 1 -->
+            <article class="divan-article-card">
+
+              <div class="divan-card-number">
+                <span>GUIDE 01</span>
+                <span>01</span>
+              </div>
+
+              <div class="divan-card-tag">
+                Size &amp; Planning
+              </div>
+
+              <h3>
+                How to Choose the Right Divan Bed Size for Your Bedroom
+              </h3>
+
+              <p>
+                A practical look at divan bed sizes, bedroom space and the
+                measurements worth checking before deciding which size will
+                work best in your room.
+              </p>
+
+              <a
+                class="divan-read-link"
+                href="how-to-choose-the-right-divan-bed-size.html"
+                aria-label="Read How to Choose the Right Divan Bed Size for Your Bedroom"
+              >
+                Read Article
+                <span>→</span>
+              </a>
+
+            </article>
+
+            <!-- Article 2 -->
+            <article class="divan-article-card">
+
+              <div class="divan-card-number">
+                <span>GUIDE 02</span>
+                <span>02</span>
+              </div>
+
+              <div class="divan-card-tag">
+                Storage
+              </div>
+
+              <h3>
+                Divan Bed Drawers Explained: Which Storage Setup Works Best?
+              </h3>
+
+              <p>
+                Compare common divan drawer layouts and think through access,
+                available floor space and the type of everyday storage your
+                bedroom actually needs.
+              </p>
+
+              <a
+                class="divan-read-link"
+                href="divan-bed-drawers-explained.html"
+                aria-label="Read Divan Bed Drawers Explained"
+              >
+                Read Article
+                <span>→</span>
+              </a>
+
+            </article>
+
+            <!-- Article 3 -->
+            <article class="divan-article-card">
+
+              <div class="divan-card-number">
+                <span>GUIDE 03</span>
+                <span>03</span>
+              </div>
+
+              <div class="divan-card-tag">
+                Comparison
+              </div>
+
+              <h3>
+                Divan Bed vs Ottoman Bed: Which Storage System Is More Practical?
+              </h3>
+
+              <p>
+                See how drawer-based divan storage compares with an ottoman
+                storage base, including access, organisation and practical
+                bedroom considerations.
+              </p>
+
+              <a
+                class="divan-read-link"
+                href="divan-bed-vs-ottoman-bed.html"
+                aria-label="Read Divan Bed vs Ottoman Bed"
+              >
+                Read Article
+                <span>→</span>
+              </a>
+
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Category Navigation -->
+      <section class="divan-next-section">
+        <div class="divan-container">
+
+          <div class="divan-next-box">
+
+            <div class="divan-next-box-label">
+              Continue exploring
+            </div>
+
+            <div class="divan-category-links">
+
+              <a
+                class="divan-category-link"
+                href="padded-beds.html"
+              >
+                Padded Beds
+              </a>
+
+              <a
+                class="divan-category-link"
+                href="ottoman-beds.html"
+              >
+                Ottoman Beds
+              </a>
+
+              <a
+                class="divan-category-link"
+                href="mattresses.html"
+              >
+                Mattresses
+              </a>
+
+              <a
+                class="divan-category-link"
+                href="kids-beds.html"
+              >
+                Kids Beds
+              </a>
+
+              <a
+                class="divan-category-link"
+                href="bed-accessories.html"
+              >
+                Bed Accessories
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer id="lf830k">
+      <script src="footer.js" defer></script>
+    </footer>
+
+  </div>
+
+</body>
+</html>

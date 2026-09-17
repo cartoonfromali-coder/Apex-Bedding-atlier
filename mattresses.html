@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mattresses | Mattress Buying Guide | Apex Bedding</title>
+  <meta name="description" content="Explore practical mattress buying guides covering firmness, mattress types and choosing the right mattress for your bedroom.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fafafa;
+      color: #1f2933;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .mattress-page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px 70px;
+    }
+
+    .mattress-hero {
+      padding: 85px 0 60px;
+      max-width: 820px;
+    }
+
+    .mattress-eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: #f59e0b;
+    }
+
+    .mattress-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.05;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 24px;
+    }
+
+    .mattress-hero p {
+      max-width: 720px;
+      font-size: 17px;
+      color: #5b6470;
+    }
+
+    .mattress-intro {
+      max-width: 850px;
+      margin-bottom: 60px;
+    }
+
+    .mattress-intro h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 38px;
+      line-height: 1.15;
+      color: #111827;
+      margin-bottom: 18px;
+    }
+
+    .mattress-intro p {
+      font-size: 16px;
+      color: #5b6470;
+      margin-bottom: 14px;
+    }
+
+    .mattress-articles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 65px;
+    }
+
+    .mattress-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 330px;
+      padding: 30px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .mattress-card:hover {
+      transform: translateY(-4px);
+      border-color: #f59e0b;
+      box-shadow: 0 12px 30px rgba(17, 24, 39, 0.08);
+    }
+
+    .mattress-card-number {
+      display: block;
+      margin-bottom: 22px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      color: #f59e0b;
+    }
+
+    .mattress-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 29px;
+      line-height: 1.18;
+      color: #111827;
+      margin-bottom: 15px;
+    }
+
+    .mattress-card p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #68717d;
+      margin-bottom: 24px;
+    }
+
+    .mattress-card-link {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #111827;
+      transition: color 0.2s ease;
+    }
+
+    .mattress-card-link::after {
+      content: '→';
+      font-size: 16px;
+      transition: transform 0.2s ease;
+    }
+
+    .mattress-card:hover .mattress-card-link {
+      color: #f59e0b;
+    }
+
+    .mattress-card:hover .mattress-card-link::after {
+      transform: translateX(4px);
+    }
+
+    .mattress-navigation {
+      padding: 38px 0 0;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .mattress-navigation h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 31px;
+      color: #111827;
+      margin-bottom: 22px;
+    }
+
+    .mattress-nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .mattress-nav-links a {
+      display: inline-flex;
+      padding: 10px 15px;
+      border: 1px solid #dfe3e7;
+      background: #ffffff;
+      font-size: 12px;
+      font-weight: 500;
+      color: #4b5563;
+      transition: all 0.2s ease;
+    }
+
+    .mattress-nav-links a:hover {
+      color: #ffffff;
+      background: #f59e0b;
+      border-color: #f59e0b;
+    }
+
+    @media (max-width: 850px) {
+      .mattress-articles {
+        grid-template-columns: 1fr;
+      }
+
+      .mattress-card {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .mattress-page {
+        padding: 0 18px 55px;
+      }
+
+      .mattress-hero {
+        padding: 58px 0 45px;
+      }
+
+      .mattress-hero h1 {
+        font-size: 47px;
+      }
+
+      .mattress-hero p {
+        font-size: 15px;
+      }
+
+      .mattress-intro {
+        margin-bottom: 45px;
+      }
+
+      .mattress-intro h2 {
+        font-size: 34px;
+      }
+
+      .mattress-card {
+        padding: 25px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .mattress-page {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .mattress-hero {
+        padding-top: 48px;
+      }
+
+      .mattress-hero h1 {
+        font-size: 42px;
+      }
+
+      .mattress-card h3 {
+        font-size: 27px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="header"></div>
+
+  <main class="mattress-page">
+
+    <section class="mattress-hero">
+      <span class="mattress-eyebrow">Mattress Buying Guide</span>
+
+      <h1>Mattresses</h1>
+
+      <p>
+        Choosing the right mattress can influence comfort, support and how
+        well your bed works for your sleeping habits. Explore practical
+        guides to help you compare your options before buying.
+      </p>
+    </section>
+
+    <section class="mattress-intro">
+      <h2>Finding the Right Mattress</h2>
+
+      <p>
+        A mattress is one of the most important parts of the bed, but there
+        is no single option that works perfectly for everyone.
+      </p>
+
+      <p>
+        Mattress type, firmness, sleeping position, body support and personal
+        comfort preferences can all influence which choice makes sense for
+        your bedroom.
+      </p>
+    </section>
+
+    <section class="mattress-articles">
+
+      <article class="mattress-card">
+        <span class="mattress-card-number">01</span>
+
+        <h3>What Mattress Firmness Should You Choose?</h3>
+
+        <p>
+          Understand the differences between softer, medium and firmer
+          mattresses and what to consider when deciding which feel suits
+          your sleeping preferences.
+        </p>
+
+        <a
+          class="mattress-card-link"
+          href="what-mattress-firmness-should-you-choose.html"
+        >
+          Read the guide
+        </a>
+      </article>
+
+      <article class="mattress-card">
+        <span class="mattress-card-number">02</span>
+
+        <h3>Which Mattress Type Is Best for Your Sleeping Position?</h3>
+
+        <p>
+          Explore how side, back and front sleeping positions can affect the
+          type of support and comfort you may want from a mattress.
+        </p>
+
+        <a
+          class="mattress-card-link"
+          href="which-mattress-type-is-best-for-your-sleeping-position.html"
+        >
+          Read the guide
+        </a>
+      </article>
+
+      <article class="mattress-card">
+        <span class="mattress-card-number">03</span>
+
+        <h3>How to Choose the Right Mattress Size for Your Bed</h3>
+
+        <p>
+          Learn which measurements matter when matching a mattress to your
+          bed frame and creating a comfortable sleeping surface.
+        </p>
+
+        <a
+          class="mattress-card-link"
+          href="how-to-choose-the-right-mattress-size-for-your-bed.html"
+        >
+          Read the guide
+        </a>
+      </article>
+
+    </section>
+
+    <section class="mattress-navigation">
+      <h2>Explore More Bed Guides</h2>
+
+      <nav class="mattress-nav-links" aria-label="Bed categories">
+        <a href="divan-beds.html">Divan Beds</a>
+        <a href="padded-beds.html">Padded Beds</a>
+        <a href="ottoman-beds.html">Ottoman Beds</a>
+        <a href="mattresses.html">Mattresses</a>
+        <a href="kids-beds.html">Kids Beds</a>
+        <a href="bed-accessories.html">Bed Accessories</a>
+        <a href="custom-bed-builder.html">Custom Bed Builder</a>
+      </nav>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="header.js"></script>
+  <script src="footer.js"></script>
+
+</body>
+</html>
