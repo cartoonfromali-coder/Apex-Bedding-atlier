@@ -46,15 +46,10 @@ document.addEventListener("DOMContentLoaded", function () {
     <footer class="site-footer">
       <a href="index.html" class="footer-brand">Base Apex <span>Bedding Atelier</span></a>
       <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="engineered-bases.html">Engineered Bases</a>
-        <a href="storage-systems.html">Storage Systems</a>
-        <a href="heavy-duty.html">Heavy Duty Frames</a>
-        <a href="mattresses.html">Mattresses</a>
-        <a href="apex-custom.html" class="highlight-link">Apex Custom Atelier</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
-        <a href="disclaimer.html">Disclaimer</a>
+       <a href="index.html">Home</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="terms-of-service.html">Terms of Service</a>
       </div>
       <p>&copy; ${currentYear} Base Apex Bedding Atelier. Precision Crafted Sleep Architecture. All rights reserved.</p>
       <p class="disclaimer">Base Apex engineers high-performance structural bases, reinforced gas-lift ottoman frames, and precision sleep systems. <a href="disclaimer.html">Disclaimer</a></p>
